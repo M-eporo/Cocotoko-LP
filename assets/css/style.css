@@ -2933,4 +2933,10 @@ p {
   opacity: 0.5;
   cursor: not-allowed;
   filter: grayscale(40%);
-}/*# sourceMappingURL=style.css.map */
+}
+
+.grecaptcha-badge {
+  bottom: clamp(9.5rem, 24.936vw + 3.656rem, 15.625rem) !important;
+  z-index: 999 !important;
+}
+/*# sourceMappingURL=style.css.map */
