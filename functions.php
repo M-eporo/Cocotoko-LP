@@ -81,6 +81,20 @@
             '1.0.0',
             true
         );
+        wp_enqueue_script(
+            'p5',
+            'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js',
+            array(),
+            '1.9.0',
+            true
+        );
+        wp_enqueue_script(
+            'p5-confetti',
+            get_template_directory_uri() . '/assets/js/confetti.js',
+            array('p5'),
+            '1.0.0',
+            true
+        );
         // reset.css
         wp_enqueue_style(
             'cocotoko-reset',

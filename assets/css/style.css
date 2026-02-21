@@ -427,7 +427,7 @@ p {
   filter: blur(29px);
   -webkit-mask-image: radial-gradient(circle at center, #000, transparent 80%);
           mask-image: radial-gradient(circle at center, #000, transparent 80%);
-  opacity: 0.5;
+  opacity: 0;
   z-index: 0;
   top: 0%;
   left: 0;
@@ -1997,8 +1997,8 @@ p {
   display: grid;
   place-content: center;
   position: fixed;
-  bottom: 36px;
-  right: 26px;
+  bottom: 14px;
+  right: 14px;
   width: clamp(6.875rem, 17.812vw + 2.7rem, 11.25rem);
   height: clamp(6.875rem, 17.812vw + 2.7rem, 11.25rem);
   border: none;
@@ -2936,7 +2936,12 @@ p {
 }
 
 .grecaptcha-badge {
-  bottom: clamp(9.5rem, 24.936vw + 3.656rem, 15.625rem) !important;
+  bottom: clamp(8.75rem, 15.267vw + 5.172rem, 12.5rem) !important;
   z-index: 999 !important;
+}
+@media (min-width: 1024px) {
+  .grecaptcha-badge {
+    bottom: 250px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

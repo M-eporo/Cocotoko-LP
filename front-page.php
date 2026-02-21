@@ -238,7 +238,7 @@
       <div class="intro">
         <p class="intro-text">地域に寄り添い、お子さまとご家族の「これから」を支えます。<br>放課後等デイサービスや児童発達支援、フリースクール、相談支援まで、専門スタッフが連携してお応えします。 <br>各事業所の見学・体験は随時受け付けております。まずはお近くの事業所、または詳細についてお気軽にお問い合わせください。</p>
       </div>
-      <div class="splide office__splide js-office__splide" aria-label="Splideの基本的なHTML">
+      <div class="splide office__splide js-office__splide" aria-label="各事業所紹介のスライダー">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
@@ -490,7 +490,7 @@
           <p class="intro-text">一人ひとりの個性に寄り添い、「できる」という自信を未来へ繋ぐ。お子さまの発達について、一人で不安を抱えていませんか？私たちは、お子さまが本来持っている「可能性」を信じ、遊びや学びを通じて社会で生きる力を育みます。幼児期から学童期、そしてご家族へのサポートまで、切れ目のない包括的な支援プログラムで、ご家族全員の笑顔があふれる毎日を全力で応援します。</p>
         </div>
         <div class="box-container js-box-container">
-          <div class="splide program__splide" aria-label="">
+          <div class="splide program__splide" aria-label="療育プログラム紹介用のスライダー">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
