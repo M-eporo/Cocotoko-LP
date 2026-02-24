@@ -812,6 +812,12 @@ p {
   color: #555;
   line-height: 1.7;
 }
+.about .container .text-wrap .text-head .text:first-child {
+  margin-bottom: 4px;
+}
+.about .container .text-wrap .text-head .text:last-child {
+  line-height: 1;
+}
 .about .container .text-wrap .text-content {
   font-size: 16px;
   color: #333;
@@ -2939,9 +2945,9 @@ p {
   bottom: clamp(8.75rem, 15.267vw + 5.172rem, 12.5rem) !important;
   z-index: 999 !important;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .grecaptcha-badge {
-    bottom: 250px;
+    bottom: 250px  !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

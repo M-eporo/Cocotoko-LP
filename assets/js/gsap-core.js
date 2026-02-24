@@ -488,7 +488,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ease: "back.out(4)"
         })
     });
-    mm.add("(min-width: 600px)", () => {
+    mm.add("(min-width: 600px) and (max-width: 1023px)", () => {
         gsap.to("#feature .container .cards > .card:nth-child(1) .js-mogura", {
             scrollTrigger: {
                 trigger: "#feature .container .cards .js-mogura-scroll-start",
