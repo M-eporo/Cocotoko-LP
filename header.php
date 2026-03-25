@@ -31,7 +31,7 @@
         <div class="container">
             <h1>
                 <a href="https://cocotoko.com/" class="logo js-logo"  target="_blank" rel="noopener no-referrer">
-                    <span>明石市の児童発達支援・療育</span>
+                    <span>明石の児童発達支援・療育</span>
                     <span>こころ相談研修センター<span class="sr-only">（新しいタブで開きます）</span></span>
                 </a>
             </h1>
@@ -77,7 +77,7 @@
         </button>
         <div class="mask js-mask" id="sp-menu" hidden>
         <a href="https://cocotoko.com/" class="logo"  target="_blank" rel="noopener no-referrer" aria-label="公式ホームページ（新しいタブで開きます）">
-            <span>明石市の児童発達支援・療育</span>
+            <span>明石の児童発達支援・療育</span>
             <span>こころ相談研修センター</span>
         </a>
         <div class="wrap">
