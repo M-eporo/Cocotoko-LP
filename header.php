@@ -9,9 +9,7 @@
         <meta name="robots" content="noindex, follow">
     <?php endif; ?>
         <meta name="description" content="<?php echo esc_attr( get_bloginfo('description') ); ?>"/>
-        
         <meta name="robots" content="noindex, nofollow">
-
         <meta property="og:type" content="website">
         <meta property="og:title" content="明石でカウンセリング・療育・相談支援なら｜こころ相談研修センター">
         <meta property="og:description" content="発達支援・子育て・療育のご相談を専門家が丁寧にサポートします。まずはご相談から。">
@@ -31,10 +29,12 @@
     <a class="skip-link" href="#main">本文へスキップ</a>
     <header class="header">
         <div class="container">
-        <a href="https://cocotoko.com/" class="logo js-logo"  target="_blank" rel="noopener no-referrer" aria-label="公式ホームページ（新しいタブで開きます）">
-            <span>一般社団法人</span>
-            <span>こころ相談研修センター</span>
-        </a>
+            <h1>
+                <a href="https://cocotoko.com/" class="logo js-logo"  target="_blank" rel="noopener no-referrer">
+                    <span>明石市の児童発達支援・療育</span>
+                    <span>こころ相談研修センター<span class="sr-only">（新しいタブで開きます）</span></span>
+                </a>
+            </h1>
         <div class="inner">
             <nav class="pc-nav" aria-label="SNSリンク">
             <ul class="pc-sns">
@@ -77,7 +77,7 @@
         </button>
         <div class="mask js-mask" id="sp-menu" hidden>
         <a href="https://cocotoko.com/" class="logo"  target="_blank" rel="noopener no-referrer" aria-label="公式ホームページ（新しいタブで開きます）">
-            <span>一般社団法人</span>
+            <span>明石市の児童発達支援・療育</span>
             <span>こころ相談研修センター</span>
         </a>
         <div class="wrap">
