@@ -30,7 +30,7 @@
     <header class="header">
         <div class="container">
             <h1>
-                <a href="https://cocotoko.com/" class="logo js-logo"  target="_blank" rel="noopener no-referrer">
+                <a href="https://cocotoko.com/" class="logo js-logo"  target="_blank" rel="noopener">
                     <span>明石の児童発達支援・療育</span>
                     <span>こころ相談研修センター<span class="sr-only">（新しいタブで開きます）</span></span>
                 </a>
@@ -39,27 +39,27 @@
             <nav class="pc-nav" aria-label="SNSリンク">
             <ul class="pc-sns">
                 <li class="sns-item js-sns-item">
-                <a href="https://www.youtube.com/@%E3%81%93%E3%81%93%E3%82%8D%E7%9B%B8%E8%AB%87%E7%A0%94%E4%BF%AE%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC/featured" target="_blank" rel="noopener no-referrer" aria-label="YouTube（新しいタブで開きます）">
+                <a href="https://www.youtube.com/@%E3%81%93%E3%81%93%E3%82%8D%E7%9B%B8%E8%AB%87%E7%A0%94%E4%BF%AE%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC/featured" target="_blank" rel="noopener" aria-label="YouTube（新しいタブで開きます）">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/youtube.svg" width="32" height="32" alt="YouTube公式チャンネル">
                 </a>
                 </li>
                 <li class="sns-item js-sns-item">
-                <a href="" target="_blank" rel="noopener noreferrer" aria-label="facebook（新しいタブで開きます）">
+                <a href="" target="_blank" rel="noopener" aria-label="facebook（新しいタブで開きます）">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/facebook.svg" width="32" height="32" alt="facebook公式アカウント">
                 </a>
                 </li>
                 <li class="sns-item js-sns-item">
-                <a href="https://www.instagram.com/feel_since2017/" target="_blank" rel="noopener noreferrer"aria-label="instagram（新しいタブで開きます）">
+                <a href="https://www.instagram.com/feel_since2017/" target="_blank" rel="noopener" aria-label="instagram（新しいタブで開きます）">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/instagram.svg" width="32" height="32" alt="Instagram公式アカウント">
                 </a>
                 </li>
                 <li class="sns-item js-sns-item">
-                <a href="https://www.tiktok.com/@feel_since17?_r=1&_t=ZS-91Sf9nEGpXt" target="_blank" rel="noopener noreferrer"aria-label="tik tok（新しいタブで開きます）">
+                <a href="https://www.tiktok.com/@feel_since17?_r=1&_t=ZS-91Sf9nEGpXt" target="_blank" rel="noopener" aria-label="tik tok（新しいタブで開きます）">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/tik_tok.svg" width="32" height="32" alt="tiktok公式アカウント">
                 </a>
                 </li>
                 <li class="sns-item js-sns-item">
-                <a href="https://x.com/feel202504?s=11" target="_blank" rel="noopener noreferrer"aria-label="x（新しいタブで開きます）">
+                <a href="https://x.com/feel202504?s=11" target="_blank" rel="noopener" aria-label="x（新しいタブで開きます）">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/x.svg" width="32" height="32" alt="X公式アカウント">
                 </a>
                 </li>
@@ -76,7 +76,7 @@
         </div>
         </button>
         <div class="mask js-mask" id="sp-menu" hidden>
-        <a href="https://cocotoko.com/" class="logo"  target="_blank" rel="noopener no-referrer" aria-label="公式ホームページ（新しいタブで開きます）">
+        <a href="https://cocotoko.com/" class="logo"  target="_blank" rel="noopener" aria-label="公式ホームページ（新しいタブで開きます）">
             <span>明石の児童発達支援・療育</span>
             <span>こころ相談研修センター</span>
         </a>
@@ -85,27 +85,27 @@
             <p class="text">最新のお知らせや活動の様子は<br class="sp-600">公式SNSでも発信しています。</p>
             <ul class="sp-sns">
                 <li class="sns-item">
-                <a href="https://www.youtube.com/@%E3%81%93%E3%81%93%E3%82%8D%E7%9B%B8%E8%AB%87%E7%A0%94%E4%BF%AE%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC/featured" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/@%E3%81%93%E3%81%93%E3%82%8D%E7%9B%B8%E8%AB%87%E7%A0%94%E4%BF%AE%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC/featured" target="_blank" rel="noopener">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/youtube.svg" width="32" height="32" alt="YouTube公式チャンネル">
                 </a>
                 </li>
                 <li class="sns-item">
-                <a href="" target="_blank" rel="noopener noreferrer">
+                <a href="" target="_blank" rel="noopener">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/facebook.svg" width="32" height="32" alt="facebook公式アカウント">
                 </a>
                 </li>
                 <li class="sns-item">
-                <a href="https://www.instagram.com/feel_since2017/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/feel_since2017/" target="_blank" rel="noopener">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/instagram.svg" width="32" height="32" alt="Instagram公式アカウント">
                 </a>
                 </li>
                 <li class="sns-item">
-                <a href="https://www.tiktok.com/@feel_since17?_r=1&_t=ZS-91Sf9nEGpXt" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.tiktok.com/@feel_since17?_r=1&_t=ZS-91Sf9nEGpXt" target="_blank" rel="noopener">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/tik_tok.svg" width="32" height="32" alt="tiktok公式アカウント">
                 </a>
                 </li>
                 <li class="sns-item">
-                <a href="https://x.com/feel202504?s=11" target="_blank" rel="noopener noreferrer">
+                <a href="https://x.com/feel202504?s=11" target="_blank" rel="noopener">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/x.svg" width="32" height="32" alt="X公式アカウント">
                 </a>
                 </li>
