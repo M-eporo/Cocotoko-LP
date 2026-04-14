@@ -1,6 +1,14 @@
 <?php
     function theme_setup() {
         add_theme_support('title-tag');
+        add_theme_support('post-thumbnails');
+        add_theme_support('html5', array('search-form'));
+        add_image_size('single-thumb', 800, 500, true);
+        //register_nav_menu('main-menu', 'メインメニュー');
+        register_nav_menus(array(
+            'secondary-menu' => 'セカンダリーメニュー',
+            'footer-menu' => 'フッターメニュー'
+        ));
     }
     add_action('after_setup_theme', 'theme_setup');
 
@@ -45,7 +53,7 @@
         wp_enqueue_script( 
             'hamburger_button',
             get_template_directory_uri() . '/assets/js/hamburger.js',
-            array('splide_min_vendor', 'splide_custom'),
+            array(),
             '1.0.0', 
             true
         );
@@ -165,6 +173,174 @@
             wp_dequeue_style('font-awesome');
         }
     });
+
+    // page('news')と投稿ページで不要なスクリプトとスタイルを解除
+    add_action('wp_enqueue_scripts', function() {
+        if(is_page('news') || is_single() || is_search()) {
+            wp_dequeue_script('splide_min_vendor');
+            wp_dequeue_script('splide_custom');
+            wp_dequeue_script('faq-accordion');
+            wp_dequeue_script('gsap-core');
+            wp_dequeue_script('gsap-scrollTrigger');
+            wp_dequeue_script('gsap-motionPath');
+            wp_dequeue_script('gsap-thema');
+            wp_dequeue_style('cocotoko-splide');
+            wp_dequeue_style('font-awesome');
+        }
+    });
+
+    function theme_widgets_init() {
+        register_sidebar(
+            array(
+                'name' => 'サイドバー',
+                'id' => 'sidebar-widget-area',
+                'description' => 'サイドバーに表示されるウィジェットエリアです。',
+                'before_widget' => '<div id="%1$s" class="widget">',
+                'after_widget' => '</div>',
+            )
+        );
+        register_sidebars(
+            3,
+            array(
+                'name' => 'フッター %d',
+                'id' => 'footer-widget-area',
+                'description' => 'フッターのサイドバー',
+                'before_widget' => '<div id="%1$s" class="%2$s">',
+                'after_widget' => '</div>'
+            )
+        );
+    }
+    add_action('widgets_init', 'theme_widgets_init');
+
+    function theme_block_setup() {
+        add_theme_support('wp-block-styles');
+        add_theme_support('responsive-embeds');
+        add_theme_support('align-wide');
+        add_theme_support(
+            'editor-color-palette',
+            array(
+                array(
+                    'name' => '固定ボタンカラー',
+                    'slug' => 'fixed-btn',
+                    'color' => '#9CC4FF'
+                ),
+                array(
+                    'name' => 'ブルー',
+                    'slug' => 'blue',
+                    'color' => '#2379E3'
+                ),
+            
+                array(
+                    'name' => 'ヘッダーカラー',
+                    'slug' => 'header-color',
+                    'color' => '#2AA8C3'
+                ),
+            
+                array(
+                    'name' => 'ロゴサブカラー',
+                    'slug' => 'logo-sub',
+                    'color' => '#90A4AE'
+                ),
+            
+                array(
+                    'name' => '緑',
+                    'slug' => 'green',
+                    'color' => '#55DD96'
+                ),
+                array(
+                    'name' => '深緑',
+                    'slug' => 'deep-green',
+                    'color' => '#5d9f66'
+                ),
+                array(
+                    'name' => 'オレンジ',
+                    'slug' => 'orange',
+                    'color' => '#FF8719'
+                ),
+                array(
+                    'name' => 'レッド',
+                    'slug' => 'red',
+                    'color' => '#ff6b6b'
+                ),
+                array(
+                    'name' => 'イエロー',
+                    'slug' => 'yellow',
+                    'color' => '#fdef2e'
+                ),
+                array(
+                    'name' => 'パープル',
+                    'slug' => 'purple',
+                    'color' => '#ECAEFF'
+                ),
+                array(
+                    'name' => 'ダークグレー',
+                    'slug' => 'dk-gray',
+                    'color' => '#555'
+                ),
+                array(
+                    'name' => 'チャコール',
+                    'slug' => 'chacoal',
+                    'color' => '#333'
+                ),
+                array(
+                    'name' => 'ホワイト',
+                    'slug' => 'white',
+                    'color' => '#fff'
+                ),
+                array(
+                    'name' => 'アイボリー',
+                    'slug' => 'ivory',
+                    'color' => '#eee'
+                ),
+            )
+        );
+        add_theme_support(
+            'editor-font-sizes',
+            array(
+                array(
+                    'name' => '極小',
+                    'size' => '14',
+                    'slug' => 'x-small',
+                ),
+                array(
+                    'name' => '小',
+                    'size' => '16',
+                    'slug' => 'small',
+                ),
+                array(
+                    'name' => '標準',
+                    'size' => '18',
+                    'slug' => 'normal',
+                ),
+                array(
+                    'name' => '大',
+                    'size' => '44',
+                    'slug' => 'large',
+                ),
+                array(
+                    'name' => '特大',
+                    'size' => '36',
+                    'slug' => 'huge',
+                ),
+            )
+        );
+        add_theme_support('editor-styles');
+        add_editor_style('assets/css/editor-styles.css');
+        add_editor_style('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Mochiy+Pop+One&family=Noto+Sans+JP:wght@100..900&family=Rampart+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=RocknRoll+One&display=swap');
+    }
+    add_action('after_setup_theme', 'theme_block_setup');
+
+    function block_style_setup() {
+        register_block_style(
+            'core/button',
+            array(
+                'name' => 'arrow',
+                'label' => '矢印付き'
+            )
+        );
+    }
+    add_action('after_setup_theme', 'block_style_setup');
+    
     add_filter('snow_monkey_forms_validate', function($errors, $form_id, $input) {
 
   if ((string)$form_id !== '18') return $errors;

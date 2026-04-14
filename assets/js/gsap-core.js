@@ -133,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
             duration: 1,
             ease: "power2.in",
         }
+        
         ).to(mainSplide, { opacity: 1 }, "<"
         ).to(yellowMist, { opacity: 0.5 }, "<"
         ).to(logo, {
@@ -176,13 +177,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 //Circle Button
-    gsap.from(".circle-btn", {
+    gsap.set(".circle-btn", { autoAlpha: 0});
+    gsap.to(".circle-btn", {
         scrollTrigger: {
             trigger: "#problems",
             start: "top 0",
             once: true,
         },
-        autoAlpha: 0,
+        autoAlpha: 1,
     });
 //Problems Section
     mm.add("(min-width: 600px)", () => {
@@ -666,6 +668,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ease: "back.out(4)"
     })
 //Cv Section
+//News Section
 
 //Voice Section
     const voiceTl = gsap.timeline({
@@ -837,6 +840,20 @@ document.addEventListener("DOMContentLoaded", () => {
         repeat: -1,
         yoyo: true,
     });
+    gsap.set("#cat-tail", { transformOrigin: "bottom" })
+    gsap.to("#cat-tail", {
+        rotation: 15,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true
+    })
+    gsap.set("#cat-tail-spot", { transformOrigin: "bottom" })
+    gsap.to("#cat-tail-spot", {
+        rotation: 6,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true
+    })
 });
 
 window.addEventListener("load", () => {
