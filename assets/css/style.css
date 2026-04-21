@@ -3279,34 +3279,52 @@ p {
 .main.single .container .side-bar {
   flex: 1 1 calc(30% - 32px);
 }
-.main.single .post .content-meta span {
+.main.single.supports .post-content .category-name {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background-color: #9CC4FF;
+  font-size: 16px;
+  color: #fff;
+}
+.main.single.supports .post-content .post-title {
+  margin-top: 0.5em;
+}
+.main.single .post .content-meta span,
+.main.single.supports .content-meta span {
   display: inline-block;
   font-size: 14px;
   color: #555;
 }
-.main.single .post .content-body .content-eyecatch img {
+.main.single .post .content-body .content-eyecatch img, 
+.main.single.supports .content-body .content-eyecatch img {
   aspect-ratio: 8 / 5;
   object-fit: cover;
 }
-.main.single .container .post-content .post .content-body .content-text {
+.main.single .container .post-content .post .content-body .content-text, 
+.main.single.supports .container .post-content .content-body .content-text {
   margin-top: 24px;
   line-height: 1.8;
 }
-.main.single .container .post-content .post .content-body .content-tag {
+.main.single .container .post-content .post .content-body .content-tag,
+.main.single.supports .container .post-content .content-body .content-tag {
   margin-top: 36px;
 }
-.main.single .container .post-content .post .content-body .content-tag > ul {
+.main.single .container .post-content .post .content-body .content-tag > ul,
+.main.single.supports .container .post-content .content-body .content-tag > ul {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1em;
 }
-.main.single .container .post-content .post .content-body .content-tag > ul > li {
+.main.single .container .post-content .post .content-body .content-tag > ul > li,
+.main.single.supports .container .post-content .content-body .content-tag > ul > li {
   border: 3px solid #9CC4FF;
   border-radius: 100vh;
   background-color: #fff;
 }
-.main.single .container .post-content .post .content-body .content-tag > ul > li > a{
+.main.single .container .post-content .post .content-body .content-tag > ul > li > a,
+.main.single.supports .container .post-content .content-body .content-tag > ul > li > a {
   display: block;
   padding: 8px 16px;
   color: #9CC4FF;

@@ -188,7 +188,8 @@
             wp_dequeue_style('font-awesome');
         }
     });
-
+    // ウィジェットエリアの追加
+    
     function theme_widgets_init() {
         register_sidebar(
             array(
@@ -212,6 +213,7 @@
     }
     add_action('widgets_init', 'theme_widgets_init');
 
+    // ブロックエディターの設定
     function theme_block_setup() {
         add_theme_support('wp-block-styles');
         add_theme_support('responsive-embeds');
@@ -330,6 +332,7 @@
     }
     add_action('after_setup_theme', 'theme_block_setup');
 
+    // ブロックに自作スタイルを追加する
     function block_style_setup() {
         register_block_style(
             'core/button',
@@ -338,9 +341,43 @@
                 'label' => '矢印付き'
             )
         );
+        register_block_style(
+            'core/button',
+            array(
+                'name' => 'fixed',
+                'label' => '幅固定'
+            )
+        );
     }
     add_action('after_setup_theme', 'block_style_setup');
     
+    // 既存のブロックパターンをすべて
+    // 削除する
+    function remove_block_patterns() {
+        remove_theme_support('core-block-patters');
+    }
+    add_action('after_setup_theme', 'remove_block_patterns');
+    // 特定のブロックパターンを削除する
+    function remove_block_pattern() {
+        unregister_block_pattern('core/social-lionks-shared-background-color');
+    }
+    add_action('init', 'remove_block_pattern');
+
+    // 独自のブロックパターンを追加する
+    function register_block_patterns() {
+        register_block_pattern(
+            'cocoro/campaign',
+            array(
+                'title' => 'キャンペーン内容',
+                'categories' => array('text'),
+                'description' => 'キャンペーン用のブロックパターン',
+                'content' => "<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">キャンペーン内容</h2>\n<!-- /wp:heading -->\n\n<!-- wp:table -->\n<figure class=\"wp-block-table\"><table class=\"as-fixed-layout\"><tbody><tr><td>対象日</td><td>キャンペーン期間中、雨が降っていたお客様</td></tr><tr><td>期間</td><td>2026年6月1日 ～ 2026年7月7日</td></tr><tr><td>内容</td><td>施術料金の合計金額から15% OFF</td></tr></tbody></table></figure>\n<!-- /wp:table -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\">\n<!-- wp:button {\"className\":\"is-style-arrow\"} -->\n<div class=\"wp-block-button is-style-arrow\">\n<a class=\"wp-block-button__link wp-element-button\">ご予約はこちら</a>\n</div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons -->",
+                'viewportWidth' => '768',
+            )
+        );
+    }
+    add_action('init', 'register_block_patterns');
+
     add_filter('snow_monkey_forms_validate', function($errors, $form_id, $input) {
 
   if ((string)$form_id !== '18') return $errors;

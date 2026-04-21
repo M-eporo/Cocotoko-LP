@@ -742,6 +742,37 @@
         ?>
         <?php endif; ?>
       </div>
+      <div class="news-content supports-content">
+      <?php $supports_args = array(
+              'post_type' => 'supports',
+              'posts_per_page' => 4
+            );
+      $supports_query = new WP_Query($supports_args);
+      if($supports_query->have_posts()):?>
+      <?php while($supports_query->have_posts()): $supports_query->the_post(); ?>
+      <div>
+        <div id="post-<?php the_ID(); ?>" <?php post_class('module-Style_Item'); ?>>
+          <a href="<?php the_permalink(); ?>" class="module-Style_Item_Link" title="<?php the_title(); ?>" >
+            <figure class="module-Style_Item_Img">
+              <?php if(has_post_thumbnail()): ?>
+                <?php the_post_thumbnail(); ?>
+              <?php else: ?>
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/baby-with-mother.jpg" alt="">
+              <?php endif; ?>
+            </figure>
+            <p><?php the_excerpt(); ?></p>
+          </a>
+        </div>
+        
+      </div>
+        
+      <?php endwhile; 
+      wp_reset_postdata();?>
+      <?php endif; ?>
+      <p>
+          <a href="<?php echo esc_url(home_url('supports')); ?>">もっと見る</a>
+        </p>
+      </div>
       <div class="news-link-container">
         <div class="animal-wrap cat js-cat">
           <svg class="animal-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="800" viewBox="0 0 800 800">
